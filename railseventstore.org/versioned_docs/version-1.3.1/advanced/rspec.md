@@ -39,7 +39,7 @@ domain_event = OrderPlaced.new(data: { order_id: 42, net_value: BigDecimal.new("
 expect(domain_event).to be_an_event(OrderPlaced).with_data(order_id: 42)
 ```
 
-This matcher is both [composable](http://rspec.info/blog/2014/01/new-in-rspec-3-composable-matchers/) and accepting [built-in matchers](https://relishapp.com/rspec/rspec-expectations/v/3-6/docs/built-in-matchers) as a part of an expectation.
+This matcher is both [composable](http://rspec.info/blog/2014/01/new-in-rspec-3-composable-matchers/) and accepting [built-in matchers](https://rspec.info/features/3-13/rspec-expectations/built-in-matchers/) as a part of an expectation.
 
 ```ruby
 expect(domain_event).to be_an_event(OrderPlaced).with_data(order_id: kind_of(Integer))
